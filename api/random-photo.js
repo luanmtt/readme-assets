@@ -2,25 +2,25 @@
 
 // Keep this list as the single source of truth for the pool.
 const IMAGES = [
-  "https://raw.githubusercontent.com/luanmtt/readme-photo-randomizer/main/pics/1.jpg",
-  "https://raw.githubusercontent.com/luanmtt/readme-photo-randomizer/main/pics/2.jpg",
-  "https://raw.githubusercontent.com/luanmtt/readme-photo-randomizer/main/pics/3.jpg",
-  "https://raw.githubusercontent.com/luanmtt/readme-photo-randomizer/main/pics/4.jpg",
-  "https://raw.githubusercontent.com/luanmtt/readme-photo-randomizer/main/pics/5.jpg",
-  "https://raw.githubusercontent.com/luanmtt/readme-photo-randomizer/main/pics/6.jpg",
-  "https://raw.githubusercontent.com/luanmtt/readme-photo-randomizer/main/pics/7.jpg",
-  "https://raw.githubusercontent.com/luanmtt/readme-photo-randomizer/main/pics/8.jpg",
-  "https://raw.githubusercontent.com/luanmtt/readme-photo-randomizer/main/pics/9.jpg",
-  "https://raw.githubusercontent.com/luanmtt/readme-photo-randomizer/main/pics/10.jpg",
-  "https://raw.githubusercontent.com/luanmtt/readme-photo-randomizer/main/pics/11.jpg",
-  "https://raw.githubusercontent.com/luanmtt/readme-photo-randomizer/main/pics/12.jpg",
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/1.jpg",
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/2.jpg",
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/3.jpg",
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/4.jpg",
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/5.jpg",
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/6.jpg",
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/7.jpg",
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/8.jpg",
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/9.jpg",
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/10.jpg",
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/11.jpg",
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/12.jpg",
 ];
 
 
 // A safe, always-available fallback in case IMAGES is ever empty
 // (e.g. someone clears the array by mistake in a future edit).
 const FALLBACK_IMAGE =
-  "https://raw.githubusercontent.com/luanmtt/readme-photo-randomizer/main/fallback.jpg";
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/fallback.jpg";
 
 
 function pickRandom(list) {
