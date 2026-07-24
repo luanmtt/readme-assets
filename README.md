@@ -1,4 +1,13 @@
-# readme-photo-randomizer
+# readme-assets
+Shenanigans to make my README.md hip and cool.
+
+---
+## wakapi language/time-tracker
+
+wip!
+
+---
+## photo-randomizer
 
 Serves a random image redirect (`/api/random-photo`) meant to be embedded in
 a GitHub profile README as an `<img>` source, so the photo appears random on
@@ -14,3 +23,4 @@ each view.
    ```md
    <img src="https://YOUR-PROJECT.vercel.app/api/random-photo" width="300" />
    ```
+---
