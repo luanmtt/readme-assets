@@ -2,6 +2,6 @@
   "name": "readme-photo-randomizer",
   "version": "1.0.0",
   "private": true,
-  "type":"module"
-  "description": "Serves a random image redirect for use in a GitHub profile README.",
+  "type":"module",
+  "description": "Serves a random image redirect for use in a GitHub profile README."
 }
