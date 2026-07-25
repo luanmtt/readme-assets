@@ -29,30 +29,29 @@ function pickRandom(list) {
   return list[index];
 }
 
+function toResizedUrl(originalUrl) {
+  const encoded = encodeURIComponent(originalUrl);
+  return `https://wsrv.nl/?url=${encoded}&w=1600&q=80&output=jpg`;
+}
+
+
 export default function handler(req, res) {
   try {
+
     const chosen = pickRandom(IMAGES) || FALLBACK_IMAGE;
 
-    // Prevent GitHub's camo proxy / browsers from caching the redirect target,
-    // so repeat visits have a real chance of getting a different image.
     res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
     res.setHeader("Pragma", "no-cache");
     res.setHeader("Expires", "0");
 
-    return res.redirect(302, chosen);
+    return res.redirect(302, toResizedUrl(chosen));
+
   } catch (err) {
-    // Last-resort safety net: never let this endpoint 500 out and
-    // leave a broken image icon on the README. Always resolve to *something*.
+
     console.error("random-photo handler error:", err);
-    try {
-      res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-      return res.redirect(302, FALLBACK_IMAGE);
-    } catch {
-      // If even the redirect fails, respond with a minimal valid response
-      // instead of an unhandled crash.
-      res.statusCode = 302;
-      res.setHeader("Location", FALLBACK_IMAGE);
-      return res.end();
-    }
+    res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+
+    return res.redirect(302, toResizedUrl(FALLBACK_IMAGE));
+
   }
 }
