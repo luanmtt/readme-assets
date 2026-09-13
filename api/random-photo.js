@@ -20,7 +20,7 @@ const IMAGES = [
 // A safe, always-available fallback in case IMAGES is ever empty
 // (e.g. someone clears the array by mistake in a future edit).
 const FALLBACK_IMAGE =
-  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/pics/fallback.jpg";
+  "https://raw.githubusercontent.com/luanmtt/readme-assets/main/fallback.jpg";
 
 
 function pickRandom(list) {
